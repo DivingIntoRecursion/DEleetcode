@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Volunteer Guide</title>
+</head>
+<body>
+    <h1>Create Volunteer Guide</h1>
+    <form method="POST">
+        <label for="volunteer_name">Volunteer Name:</label>
+        <input type="text" id="volunteer_name" name="volunteer_name" required>
+        
+        <label for="area">Area:</label>
+        <input type="text" id="area" name="area" required>
+        
+        <label for="route">Route:</label>
+        <input type="text" id="route" name="route" required>
+        
+        <label for="time">Start Time:</label>
+        <input type="text" id="time" name="time" required>
+        
+        <button type="submit">Generate Guide</button>
+    </form>
+    {% if guide %}
+        <h3>Generated Guide:</h3>
+        <p>{{ guide }}</p>
+    {% endif %}
+</body>
+</html>

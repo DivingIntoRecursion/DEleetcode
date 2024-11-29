@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Distribution Plan</title>
+</head>
+<body>
+    <h1>Generate Food Distribution Plan</h1>
+    <form method="POST">
+        <label for="areas">Areas:</label>
+        <input type="text" id="areas" name="areas" required>
+        
+        <label for="meals">Number of Meals:</label>
+        <input type="number" id="meals" name="meals" required>
+        
+        <label for="demographics">Demographics:</label>
+        <textarea id="demographics" name="demographics" required></textarea>
+        
+        <button type="submit">Generate Plan</button>
+    </form>
+    {% if plan %}
+        <h3>Generated Plan:</h3>
+        <p>{{ plan }}</p>
+    {% endif %}
+</body>
+</html>
